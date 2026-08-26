@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/views")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://bloodartz.netlify.app"
+})
 public class ViewController {
 
     private final ViewService viewService;
